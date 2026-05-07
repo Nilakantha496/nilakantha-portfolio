@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">Loading...</div>
+    </div>
+
+    <div class="custom-cursor"></div>
+    <div id="particles-js"></div>
+
+    <nav class="navbar">
+        <div class="logo">Portfolio.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Nilakantha Sahu</span></h1>
+            <p>Building beautiful, full-stack experiences.</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+        <div class="hero-image-container">
+            <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Developer" class="profile-img">
+            <div class="img-glow"></div>
+        </div>
+        <div class="hero-shape"></div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-content">
+            <p>I am Nilakantha Sahu, currently pursuing a Bachelor of Computer Applications (BCA) at Centurion University of Technology and Management. I am passionate about technology, software development, and machine learning.</p>
+            <p>Currently, I am a <strong>Full Stack Development Intern at Thiranex</strong>, where I apply my hands-on experience in modern web technologies to real-world problems. My skill set spans across languages like Python, Java, C++, and frameworks like Next.js, React, and Node.js. I enjoy exploring new technologies, from cybersecurity to AI, and customizing Linux systems.</p>
+            
+            <div class="achievements-container" style="margin-top: 2rem; background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--primary-color);">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-trophy"></i> Achievements & Certifications</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-medal" style="color: gold; margin-right: 10px;"></i><strong>1st Position</strong> in Poster Design Competition during Gajajyoti 2026.</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-certificate" style="color: var(--secondary-color); margin-right: 10px;"></i>Certifications in <strong>Cybersecurity Awareness</strong>, <strong>AI for Beginners</strong>, and <strong>Data Science & Analytics</strong>.</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-network-wired" style="color: var(--secondary-color); margin-right: 10px;"></i>Completed Learning Milestone in <strong>Computer & Communication Networks</strong>.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="section-header">
+            <h2>My Skills</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="skills-container" id="skills-container">
+            <!-- Skills will be dynamically injected here -->
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+            <!-- Projects will be dynamically injected here -->
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Let's Connect</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:nilakanthasahu496@gmail.com">nilakanthasahu496@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> +91 7008909543</p>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/Nilakantha496" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/nilakantha-sahu-1b1b66270?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2026 Nilakantha Sahu. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
